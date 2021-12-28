@@ -8,3 +8,16 @@ C:\Users\Acer\source\repos\Lesson\Entities\obj\Debug\netcoreapp3.1\Entities.Asse
 C:\Users\Acer\source\repos\Lesson\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
 C:\Users\Acer\source\repos\Lesson\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Users\Acer\source\repos\Lesson\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\react\LessOnBack\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\react\LessOnBack\Entities\bin\Debug\netcoreapp3.1\Entities.runtimeconfig.json
+C:\react\LessOnBack\Entities\bin\Debug\netcoreapp3.1\Entities.runtimeconfig.dev.json
+C:\react\LessOnBack\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\react\LessOnBack\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.AssemblyReference.cache
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\react\LessOnBack\Entities\obj\Debug\netcoreapp3.1\Entities.genruntimeconfig.cache

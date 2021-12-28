@@ -14,11 +14,12 @@ namespace Services
 {
     public class AccountService : IAccountService
     {
-        private readonly IRepository _repository;
+        //private readonly IRepository _repository;
+        private readonly IGenericRepository<Person> _genericRepository;
         private readonly TokenParameters _tokenParameters;
-        public AccountService(IRepository repository, IOptions<TokenParameters> tokenParameters)
+        public AccountService(IGenericRepository<Person> genericRepository, IOptions<TokenParameters> tokenParameters)
         {
-            _repository = repository;
+            _genericRepository = genericRepository;
             _tokenParameters = tokenParameters.Value;
         }
 
@@ -57,7 +58,7 @@ namespace Services
 
         private ClaimsIdentity GetIdentity(string username, string password)
         {
-            var person = _repository.GetPeople().FirstOrDefault(x => x.Login == username && x.Password == password);
+            var person = _genericRepository.Query().FirstOrDefault(x => x.Login == username && x.Password == password);
 
             if (person != null)
             {

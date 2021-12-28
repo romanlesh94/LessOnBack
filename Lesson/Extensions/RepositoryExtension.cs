@@ -7,7 +7,8 @@ namespace Lesson.Extensions
     {
         public static void AddRepository(this IServiceCollection services)
         {
-            services.AddScoped<IRepository, Repository.Repository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+                //<IRepository, Repository.Repository>();
         }
     }
 }

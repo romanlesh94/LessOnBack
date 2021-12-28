@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Entities",
+    "\\Lesson"
   ],
-  "SelectedNode": "\\Lesson",
+  "SelectedNode": "\\Lesson\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }
