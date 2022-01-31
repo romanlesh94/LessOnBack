@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Services;
 using System;
+using System.Threading.Tasks;
 
 namespace Lesson.Controllers
 {
@@ -16,7 +17,7 @@ namespace Lesson.Controllers
         }
 
 
-        [HttpPost("/token")]
+        [HttpPost("/LogIn")]
         public IActionResult Token(string username, string password)
         {
             try
@@ -35,5 +36,19 @@ namespace Lesson.Controllers
             }
  
         }   
+        [HttpPost("/SignUp")]
+        public async Task<IActionResult> Signup(string username, string password)
+        {
+            try
+            {
+                var result = await _service.SignUpAsync(username, password);
+
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return Forbid(e.Message);
+            }
+        }
     }
 }

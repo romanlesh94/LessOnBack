@@ -11,7 +11,7 @@ namespace Lesson.Extensions
     {
         public static void AddDbContext(this IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>();
+            services.AddDbContext<ApplicationContext>();
         }
     }
 }

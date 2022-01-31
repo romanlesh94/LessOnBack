@@ -9,12 +9,12 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Options;
 using System.Text;
 using Entities.Exceptions;
+using System.Threading.Tasks;
 
 namespace Services
 {
     public class AccountService : IAccountService
     {
-        //private readonly IRepository _repository;
         private readonly IGenericRepository<Person> _genericRepository;
         private readonly TokenParameters _tokenParameters;
         public AccountService(IGenericRepository<Person> genericRepository, IOptions<TokenParameters> tokenParameters)
@@ -54,6 +54,16 @@ namespace Services
             };
 
             return response;
+        }
+
+        public async Task<Person> SignUpAsync(string username, string password)
+        {
+
+            Person person = new Person { Login = username, Password = password };
+            
+            await _genericRepository.CreateAsync(person);
+
+            return person;
         }
 
         private ClaimsIdentity GetIdentity(string username, string password)

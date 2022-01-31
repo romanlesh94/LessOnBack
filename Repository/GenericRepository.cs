@@ -8,10 +8,10 @@ namespace Repository
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        private readonly DbContext _context;
+        private readonly ApplicationContext _context;
         private readonly DbSet<TEntity> _dbSet;
 
-        public GenericRepository(DbContext context)
+        public GenericRepository(ApplicationContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
@@ -27,16 +27,16 @@ namespace Repository
             return _dbSet.Find(id);
         }
 
-        public void Create(TEntity item)
+        public async Task CreateAsync(TEntity item)
         {
             _dbSet.Add(item);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void Update(TEntity item)
+        public async Task UpdateAsync(TEntity item)
         {
             _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public async Task RemoveAsync(TEntity item)

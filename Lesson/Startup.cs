@@ -26,14 +26,14 @@ namespace Lesson
             services.Configure<TokenParameters>(Configuration.GetSection("TokenValidationParameters"));
             services.AddAuth(Configuration);
             services.AddControllersWithViews();
-            services.AddDbContext<AppDbContext>();
+            services.Configure<ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
+            services.AddDbContext<ApplicationContext>();
             services.AddRepository();
             services.AddAccountService();
             services.AddSwaggerGen(swagger =>
             {
                 swagger.SwaggerDoc("v1", new OpenApiInfo{ Title = "My API" });
             });
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

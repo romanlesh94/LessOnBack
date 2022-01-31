@@ -3,7 +3,7 @@ using Services;
 
 namespace Lesson.Extensions
 {
-    public static class AccountServiceExtension
+    public static class ServicesExtension
     {
         public static void AddAccountService(this IServiceCollection services)
         {

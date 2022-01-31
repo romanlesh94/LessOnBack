@@ -8,10 +8,10 @@ namespace Repository
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
-        void Create(TEntity item);
+        Task CreateAsync(TEntity item);
         TEntity FindById(int id);
         IQueryable<TEntity> Query();
         Task RemoveAsync(TEntity item);
-        void Update(TEntity item);
+        Task UpdateAsync(TEntity item);
     }
 }
