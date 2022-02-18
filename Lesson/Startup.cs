@@ -30,6 +30,7 @@ namespace Lesson
             services.AddDbContext<ApplicationContext>();
             services.AddRepository();
             services.AddAccountService();
+            services.AddUnitService();
             services.AddSwaggerGen(swagger =>
             {
                 swagger.SwaggerDoc("v1", new OpenApiInfo{ Title = "My API" });
