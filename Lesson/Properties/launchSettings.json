@@ -20,7 +20,7 @@
     "Lesson": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "lesson",
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

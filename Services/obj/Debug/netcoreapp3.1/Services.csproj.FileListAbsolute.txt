@@ -29,4 +29,3 @@ C:\react\LessOnBack\Services\obj\Debug\netcoreapp3.1\Services.csproj.CoreCompile
 C:\react\LessOnBack\Services\obj\Debug\netcoreapp3.1\Services.dll
 C:\react\LessOnBack\Services\obj\Debug\netcoreapp3.1\Services.pdb
 C:\react\LessOnBack\Services\obj\Debug\netcoreapp3.1\Services.genruntimeconfig.cache
-C:\react\LessOnBack\Services\obj\Debug\netcoreapp3.1\Services.csproj.CopyComplete
