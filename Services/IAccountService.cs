@@ -8,7 +8,7 @@ namespace Services
 {
     public interface IAccountService 
     {
-        object LogIn(string username, string password);
+        Task<Response> LogInAsync(string username, string password);
         Task <Person> SignUpAsync(string username, string password);
     }
 }

@@ -9,8 +9,8 @@ namespace Repository
     public interface IGenericRepository<TEntity> where TEntity : class
     {
         Task CreateAsync(TEntity item);
-        TEntity FindById(int id);
-        IQueryable<TEntity> Query();
+        Task<TEntity> FindByIdAsync(int id);
+        Task<IQueryable<TEntity>> QueryAsync();
         Task RemoveAsync(TEntity item);
         Task UpdateAsync(TEntity item);
     }

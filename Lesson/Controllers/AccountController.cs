@@ -18,11 +18,11 @@ namespace Lesson.Controllers
 
 
         [HttpPost("/LogIn")]
-        public IActionResult Token(string username, string password)
+        public async Task<IActionResult> LogInAsync(string username, string password)
         {
             try
             {
-                var result = _service.LogIn(username, password);
+                var result = await _service.LogInAsync(username, password);
                 
                 return Ok(result);
             }
@@ -37,7 +37,7 @@ namespace Lesson.Controllers
  
         }   
         [HttpPost("/SignUp")]
-        public async Task<IActionResult> Signup(string username, string password)
+        public async Task<IActionResult> SignUpAsync(string username, string password)
         {
             try
             {

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Repository
 {
@@ -17,14 +18,14 @@ namespace Repository
             _dbSet = context.Set<TEntity>();
         }
 
-        public IQueryable<TEntity> Query()
+        public async Task <IQueryable<TEntity>> QueryAsync()
         {
-            return _dbSet.AsNoTracking();
+            return await Task.FromResult(_dbSet.AsNoTracking());
         }
 
-        public TEntity FindById(int id)
+        public async Task<TEntity> FindByIdAsync(int id)
         {
-            return _dbSet.Find(id);
+            return await _dbSet.FindAsync(id);
         }
 
         public async Task CreateAsync(TEntity item)

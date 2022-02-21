@@ -25,5 +25,13 @@ namespace Lesson.Controllers
 
             return Ok(result);
         }
+
+        [HttpPost("/get-units")]
+        public async Task<IActionResult> GetUnitsAsync()
+        {
+            var result = await _service.GetUnitsAsync();
+
+            return Ok(result);
+        }
     }
 }

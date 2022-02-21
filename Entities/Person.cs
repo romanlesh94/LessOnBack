@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Entities
 {
-    public class Person
+    public class Person : BaseEntity
     {
-        [Key]
-        public long Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }

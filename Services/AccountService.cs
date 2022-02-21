@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 using System.Text;
 using Entities.Exceptions;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Services
 {
@@ -25,9 +26,9 @@ namespace Services
 
         public const int LIFETIME = 1;
 
-        public object LogIn(string username, string password)
+        public async Task<Response> LogInAsync(string username, string password)
         {
-            var identity = GetIdentity(username, password);
+            var identity = await GetIdentityAsync(username, password);
             
             if (identity == null)
             {
@@ -47,10 +48,10 @@ namespace Services
                     signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
 
-            var response = new
+            Response response = new Response
             { 
-                access_token = encodedJwt,
-                username = identity.Name
+                Token = encodedJwt,
+                Username = identity.Name
             };
 
             return response;
@@ -66,9 +67,9 @@ namespace Services
             return person;
         }
 
-        private ClaimsIdentity GetIdentity(string username, string password)
+        private async Task<ClaimsIdentity> GetIdentityAsync(string username, string password)
         {
-            var person = _genericRepository.Query().FirstOrDefault(x => x.Login == username && x.Password == password);
+            var person = await (await _genericRepository.QueryAsync()).FirstOrDefaultAsync(x => x.Login == username && x.Password == password);
 
             if (person != null)
             {

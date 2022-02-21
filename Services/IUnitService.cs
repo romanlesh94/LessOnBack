@@ -9,5 +9,6 @@ namespace Services
     public interface IUnitService
     {
         Task<Unit> AddUnitAsync(string name, string description, string imagePath);
+        Task<List<Unit>> GetUnitsAsync();
     }
 }

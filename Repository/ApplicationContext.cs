@@ -15,6 +15,9 @@ namespace Repository
 
         public DbSet<Person> People { get; set; }
         public DbSet<Unit> Units { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
+
+
 
         public ApplicationContext() : base()
         {

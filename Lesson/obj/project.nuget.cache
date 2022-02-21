@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "a0WGcNqZapRdDgRdekLyiObexj3YXTR3aPdFpTM+/vz8bjGeOkY1opQtTZazJp1AtffRnYnr/39cei87R1yy/g==",
+  "dgSpecHash": "Dq57iFw3f6weect1mrUYGbuAgFL24fcosFyG/+jVJa3piJ/0Mbomj6JdlKTBg0QN1NAVd3qfP/1QEZxGvQ9mkw==",
   "success": true,
   "projectFilePath": "C:\\react\\LessOnBack\\Lesson\\Lesson.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.21\\microsoft.aspnetcore.authentication.jwtbearer.3.1.21.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

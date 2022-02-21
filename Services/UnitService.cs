@@ -1,7 +1,9 @@
 ﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 using Repository;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,5 +25,13 @@ namespace Services
 
             return unit;
         }
+
+        public async Task<List<Unit>> GetUnitsAsync()
+        {
+            var units = await (await _genericRepository.QueryAsync()).ToListAsync();
+
+            return units;
+        }
+
     }
 }

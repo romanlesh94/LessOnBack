@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7FGkbfTqmVzWD13XIG9R3EC34FoAcTZNOwvm9AS6wUgG2XLmWh0DNIK3RSQd4idW58v4ohXjscJVOkdtQkif8w==",
+  "dgSpecHash": "fNxehVLO7Bllzzdku1hV+MVXe0EA6kC/ZTpsHGsKQVpJOmIryIkGXYtyphA5cDmWD5h5Re8EaLsf3DKZSGCVsA==",
   "success": true,
   "projectFilePath": "C:\\react\\LessOnBack\\Services\\Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

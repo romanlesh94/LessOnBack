@@ -26,3 +26,4 @@ C:\react\LessOnBack\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCom
 C:\react\LessOnBack\Repository\obj\Debug\netcoreapp3.1\Repository.dll
 C:\react\LessOnBack\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
 C:\react\LessOnBack\Repository\obj\Debug\netcoreapp3.1\Repository.genruntimeconfig.cache
+C:\react\LessOnBack\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
