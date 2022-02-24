@@ -28,6 +28,7 @@ namespace Lesson
             services.AddControllersWithViews();
             services.Configure<ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
             services.AddDbContext<ApplicationContext>();
+            services.AddAutoMapper(typeof(AppProfile));
             services.AddRepository();
             services.AddAccountService();
             services.AddUnitService();

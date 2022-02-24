@@ -118,4 +118,6 @@ C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.RazorTargetAssemblyInf
 C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.dll
 C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.pdb
 C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.genruntimeconfig.cache
+C:\react\LessOnBack\Lesson\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\react\LessOnBack\Lesson\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.csproj.CopyComplete

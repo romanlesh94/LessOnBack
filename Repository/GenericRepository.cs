@@ -23,20 +23,21 @@ namespace Repository
             return await Task.FromResult(_dbSet.AsNoTracking());
         }
 
-        public async Task<TEntity> FindByIdAsync(int id)
+        public async Task<TEntity> FindByIdAsync(long id)
         {
             return await _dbSet.FindAsync(id);
         }
 
         public async Task CreateAsync(TEntity item)
         {
-            _dbSet.Add(item);
+            await _dbSet.AddAsync(item);
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(TEntity item)
         {
             _context.Entry(item).State = EntityState.Modified;
+            _dbSet.Update(item);
             await _context.SaveChangesAsync();
         }
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities
 {
-    public class Response
+    public class ResponseDTO
     {
         public string Token { get; set; }
         public string Username { get; set; }

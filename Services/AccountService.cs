@@ -26,7 +26,7 @@ namespace Services
 
         public const int LIFETIME = 1;
 
-        public async Task<Response> LogInAsync(string username, string password)
+        public async Task<ResponseDTO> LogInAsync(string username, string password)
         {
             var identity = await GetIdentityAsync(username, password);
             
@@ -48,7 +48,7 @@ namespace Services
                     signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
 
-            Response response = new Response
+            ResponseDTO response = new ResponseDTO
             { 
                 Token = encodedJwt,
                 Username = identity.Name

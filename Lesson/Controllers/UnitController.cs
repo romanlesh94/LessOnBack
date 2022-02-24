@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Entities.DTO;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 using System;
@@ -19,17 +20,32 @@ namespace Lesson.Controllers
         }
 
         [HttpPost("/add-unit")]
-        public async Task<IActionResult> AddUnitAsync(string name, string description, string imagePath)
+        public async Task<IActionResult> AddUnitAsync(CreateUnitDTO createUnitDTO)
         {
-            var result = await _service.AddUnitAsync(name, description, imagePath);
+            var result = await _service.AddUnitAsync(createUnitDTO);
 
             return Ok(result);
         }
 
-        [HttpPost("/get-units")]
+        [HttpPost("/update-unit")]
+        public async Task<IActionResult> UpdateUnitAsync(UpdateUnitDTO updateUnitDTO)
+        {
+            var result = await _service.UpdateUnitAsync(updateUnitDTO);
+
+            return Ok(result);
+        }
+
+        [HttpGet("/get-units")]
         public async Task<IActionResult> GetUnitsAsync()
         {
             var result = await _service.GetUnitsAsync();
+
+            return Ok(result);
+        }
+        [HttpDelete("/delete-unit")]
+        public async Task<IActionResult> DeleteUnitAsync(long id)
+        {
+            var result = await _service.DeleteUnitAsync(id);
 
             return Ok(result);
         }
