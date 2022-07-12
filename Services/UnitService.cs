@@ -31,11 +31,13 @@ namespace Services
             return unit;
         }
 
-        public async Task<List<Unit>> GetUnitsAsync()
+        public async Task<List<GetUnitsDTO>> GetUnitsAsync()
         {
-            var units = await (await _genericRepository.QueryAsync()).ToListAsync();
+            var units = await (await _genericRepository.QueryAsync()).Include(u => u.Lessons).ToListAsync();
 
-            return units;
+            var unitsDTO = _mapper.Map<List<GetUnitsDTO>>(units);
+
+            return unitsDTO;
         }
 
         public async Task<Unit> UpdateUnitAsync(UpdateUnitDTO updateUnitDTO)

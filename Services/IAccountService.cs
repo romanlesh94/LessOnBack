@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Services
 {
     public interface IAccountService 
     {
-        Task<ResponseDTO> LogInAsync(string username, string password);
-        Task <Person> SignUpAsync(string username, string password);
+        Task<ResponseDTO> LogInAsync(AuthDTO authDTO);
+        Task <Person> SignUpAsync(AuthDTO authDTO);
     }
 }

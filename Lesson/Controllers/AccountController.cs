@@ -1,10 +1,11 @@
-﻿using Entities.Exceptions;
+﻿using Entities.DTO;
+using Entities.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 using System;
 using System.Threading.Tasks;
 
-namespace Lesson.Controllers
+namespace LessOn.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,12 +18,12 @@ namespace Lesson.Controllers
         }
 
 
-        [HttpPost("/LogIn")]
-        public async Task<IActionResult> LogInAsync(string username, string password)
+        [HttpPost("/log-in")]
+        public async Task<IActionResult> LogInAsync(AuthDTO authDTO)
         {
             try
             {
-                var result = await _service.LogInAsync(username, password);
+                var result = await _service.LogInAsync(authDTO);
                 
                 return Ok(result);
             }
@@ -36,12 +37,14 @@ namespace Lesson.Controllers
             }
  
         }   
-        [HttpPost("/SignUp")]
-        public async Task<IActionResult> SignUpAsync(string username, string password)
+        [HttpPost("/sign-up")]
+        public async Task<IActionResult> SignUpAsync(AuthDTO authDTO)
         {
             try
             {
-                var result = await _service.SignUpAsync(username, password);
+                await _service.SignUpAsync(authDTO);
+
+                var result = await _service.LogInAsync(authDTO);
 
                 return Ok(result);
             }

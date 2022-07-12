@@ -120,4 +120,6 @@ C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.pdb
 C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.genruntimeconfig.cache
 C:\react\LessOnBack\Lesson\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\react\LessOnBack\Lesson\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\react\LessOnBack\Lesson\obj\Debug\netcoreapp3.1\Lesson.csproj.CopyComplete
+C:\react\LessOnBack\Lesson\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\react\LessOnBack\Lesson\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\react\LessOnBack\Lesson\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

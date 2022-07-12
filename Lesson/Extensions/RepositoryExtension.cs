@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Repository;
 
-namespace Lesson.Extensions
+namespace LessOn.Extensions
 {
     public static class RepositoryExtension
     {

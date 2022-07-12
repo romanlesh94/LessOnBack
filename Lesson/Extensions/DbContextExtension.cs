@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lesson.Extensions
+namespace LessOn.Extensions
 {
     public static class DbContextExtension
     {

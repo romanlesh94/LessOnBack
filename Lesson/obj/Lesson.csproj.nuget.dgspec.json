@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\react\\LessOnBack\\Lesson\\Lesson.csproj": {}
+    "C:\\react\\LessOnBack\\Lesson\\LessOn.csproj": {}
   },
   "projects": {
     "C:\\react\\LessOnBack\\Entities\\Entities.csproj": {
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.25, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.13, )"
@@ -78,12 +82,12 @@
         }
       }
     },
-    "C:\\react\\LessOnBack\\Lesson\\Lesson.csproj": {
+    "C:\\react\\LessOnBack\\Lesson\\LessOn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\react\\LessOnBack\\Lesson\\Lesson.csproj",
-        "projectName": "Lesson",
-        "projectPath": "C:\\react\\LessOnBack\\Lesson\\Lesson.csproj",
+        "projectUniqueName": "C:\\react\\LessOnBack\\Lesson\\LessOn.csproj",
+        "projectName": "LessOn",
+        "projectPath": "C:\\react\\LessOnBack\\Lesson\\LessOn.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
         "outputPath": "C:\\react\\LessOnBack\\Lesson\\obj\\",
         "projectStyle": "PackageReference",
@@ -135,6 +139,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.21, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.25, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -221,6 +229,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.25, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.13, )"
@@ -298,6 +310,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.25, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

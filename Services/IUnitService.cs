@@ -12,6 +12,6 @@ namespace Services
         Task<Unit> AddUnitAsync(CreateUnitDTO createUnitDTO);
         Task<Unit> UpdateUnitAsync(UpdateUnitDTO updateUnitDTO);
         Task<Unit> DeleteUnitAsync(long id);
-        Task<List<Unit>> GetUnitsAsync();
+        Task<List<GetUnitsDTO>> GetUnitsAsync();
     }
 }

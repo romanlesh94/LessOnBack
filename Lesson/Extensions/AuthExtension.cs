@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
 
-namespace Lesson.Extensions
+namespace LessOn.Extensions
 {
     public static class AuthExtension
     {

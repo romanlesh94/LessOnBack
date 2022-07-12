@@ -16,6 +16,8 @@ namespace Repository
         public DbSet<Person> People { get; set; }
         public DbSet<Unit> Units { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<Cardset> Cardsets { get; set; }
+        public DbSet<Card> Cards { get; set; }
 
 
 

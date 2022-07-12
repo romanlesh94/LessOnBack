@@ -11,6 +11,7 @@ using System.Text;
 using Entities.Exceptions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Entities.DTO;
 
 namespace Services
 {
@@ -24,11 +25,11 @@ namespace Services
             _tokenParameters = tokenParameters.Value;
         }
 
-        public const int LIFETIME = 1;
+        public const int LIFETIME = 100;
 
-        public async Task<ResponseDTO> LogInAsync(string username, string password)
+        public async Task<ResponseDTO> LogInAsync(AuthDTO authDTO)
         {
-            var identity = await GetIdentityAsync(username, password);
+            var identity = await GetIdentityAsync(authDTO.Login, authDTO.Password);
             
             if (identity == null)
             {
@@ -51,18 +52,28 @@ namespace Services
             ResponseDTO response = new ResponseDTO
             { 
                 Token = encodedJwt,
-                Username = identity.Name
+                Username = identity.Name,
+                Country = identity.FindFirst(x => x.Type == ClaimTypes.Locality).Value,
+                Email = identity.FindFirst(x => x.Type == ClaimTypes.Email).Value,
+
             };
 
             return response;
         }
 
-        public async Task<Person> SignUpAsync(string username, string password)
+        public async Task<Person> SignUpAsync(AuthDTO authDTO)
         {
 
-            Person person = new Person { Login = username, Password = password };
+            Person person = new Person { 
+                Login = authDTO.Login, 
+                Password = authDTO.Password, 
+                Country = authDTO.Country, 
+                Email = authDTO.Email,
+            };
             
             await _genericRepository.CreateAsync(person);
+
+            await this.LogInAsync(authDTO);
 
             return person;
         }
@@ -76,6 +87,8 @@ namespace Services
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimsIdentity.DefaultNameClaimType, person.Login),
+                    new Claim(ClaimTypes.Email, person.Email),
+                    new Claim(ClaimTypes.Locality, person.Country),
                     //new Claim(ClaimsIdentity.DefaultRoleClaimType, person.Role)
                 };
                 ClaimsIdentity claimsIdentity =

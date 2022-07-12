@@ -4,11 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Lesson.Extensions;
+using LessOn.Extensions;
 using Entities;
 using Repository;
 
-namespace Lesson
+namespace LessOn
 {
     public class Startup
     {
@@ -31,7 +31,14 @@ namespace Lesson
             services.AddAutoMapper(typeof(AppProfile));
             services.AddRepository();
             services.AddAccountService();
+            services.AddCardsetService();
+            services.AddCardService();
             services.AddUnitService();
+            services.AddLessonService();
+            services.AddCors();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddSwaggerGen(swagger =>
             {
                 swagger.SwaggerDoc("v1", new OpenApiInfo{ Title = "My API" });
@@ -52,16 +59,22 @@ namespace Lesson
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API");
             });
 
+            app.UseHttpsRedirection();
+
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
-            app.UseAuthorization();
-            app.UseAuthentication();
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+            );
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
